@@ -1,0 +1,15 @@
+.card {
+	font-size: 1rem;
+	color: rgba(0,0,0,.5);
+	box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+	border-color: #fff;
+}
+
+a.card-link {
+	color: -webkit-link;
+}
+
+a.card-link .card:hover {
+	border-color: #f23a2e;
+	box-shadow: none;
+}
