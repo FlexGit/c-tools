@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('alias');
             $table->text('preview_text')->nullable();
-            $table->text('preview_img_path')->nullable();
+            $table->text('image')->nullable();
             $table->longText('detail_text')->nullable();
             $table->text('meta_title')->nullable();
             $table->text('meta_description')->nullable();
