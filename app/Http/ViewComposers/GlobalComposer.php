@@ -21,7 +21,6 @@ class GlobalComposer {
         }
 
         $sections = Section::activeSections();
-
         $settingItems = Setting::activeSettings();
 
         return $view

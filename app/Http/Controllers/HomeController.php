@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Certificate;
 use App\Models\News;
 use App\Models\Page;
+use App\Models\Partner;
 use App\Models\Service;
 use App\Models\Slider;
 use Carbon\Carbon;
@@ -34,9 +35,8 @@ class HomeController extends Controller
         $sliders = Slider::where('is_active', true)->orderBy('sort')->get();
         $certificates = Certificate::where('is_active', true)->orderBy('title')->get();
         $news = News::where('is_active', true)->latest()->get();
+        $partners = Partner::where('is_active', true)->latest()->get();
         $aboutPage = Page::where('alias', Page::ABOUT_ALIAS)->first();
-
-        //$isMobile = (Browser::isDesktop() || Browser::isTablet()) ? false : true;
 
 		return view('home', [
 			'page' => $page,
@@ -44,8 +44,8 @@ class HomeController extends Controller
             'certificates' => $certificates,
             'services' => $services,
             'news' => $news,
+            'partners' => $partners,
             'aboutPage' => $aboutPage,
-			//'isMobile' => $isMobile,
 		]);
 	}
 
