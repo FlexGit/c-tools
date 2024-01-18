@@ -8,4 +8,4 @@
 <link rel="stylesheet" href="{{ asset('css/bootstrap-datepicker.css') }}">
 <link rel="stylesheet" href="{{ asset('fonts/flaticon/font/flaticon.css') }}">
 <link rel="stylesheet" href="{{ asset('css/aos.css') }}">
-<link rel="stylesheet" href="{{ asset('css/style.css?v=6') }}">
+<link rel="stylesheet" href="{{ asset('css/style.css?v=' . time()) }}">

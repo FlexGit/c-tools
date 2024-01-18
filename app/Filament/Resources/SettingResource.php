@@ -63,9 +63,17 @@ class SettingResource extends Resource
                 TextInput::make('alias')
                     ->required()
                     ->maxLength(255),
-                TextInput::make('value')
-                    ->maxLength(255)
-                    ->columnSpan('full'),
+                TinyEditor::make('value')
+                    ->setRelativeUrls(false)
+                    ->fileAttachmentsDisk('public')
+                    ->fileAttachmentsDirectory('page')
+                    ->fileAttachmentsVisibility('public')
+                    ->showMenuBar()
+                    ->toolbarSticky(true)
+                    ->columnSpan('full')
+                    ->minHeight(500)
+                    ->maxHeight(500)
+                    ->language('ru'),
                 FileUpload::make('image')
                     ->directory('setting')
                     ->visibility('public')

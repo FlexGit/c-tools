@@ -33,6 +33,12 @@ Breadcrumbs::for('news', function (BreadcrumbTrail $trail) {
 });
 
 // Главная > Раздел
+Breadcrumbs::for('sections', function (BreadcrumbTrail $trail) {
+    $trail->parent('home');
+    $trail->push('Разделы', route('page', 'section'));
+});
+
+// Главная > Раздел
 Breadcrumbs::for('section', function (BreadcrumbTrail $trail, $section) {
     $trail->parent('home');
     $trail->push($section->title, route('section', $section->alias));

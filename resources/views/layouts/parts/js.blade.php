@@ -9,4 +9,4 @@
 <script src="{{ asset('js/jquery.magnific-popup.min.js') }}"></script>
 <script src="{{ asset('js/bootstrap-datepicker.min.js') }}"></script>
 <script src="{{ asset('js/aos.js') }}"></script>
-<script src="{{ asset('js/main.js?v=2') }}"></script>
+<script src="{{ asset('js/main.js?v=' . time()) }}"></script>

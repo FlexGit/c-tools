@@ -1,5 +1,5 @@
 $(function() {
-    $(document).on('keyup', 'input[id="data.title"]', function() {
+    $(document).on('keyup', 'input[id="data.title"], input[id="data.name"]', function() {
         $('input[id="data.alias"]').val(transliterate($(this).val()));
     });
 

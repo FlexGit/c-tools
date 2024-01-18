@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Certificate;
+use App\Models\News;
 use App\Models\Page;
 use App\Models\Service;
 use App\Models\Slider;
@@ -30,6 +32,8 @@ class HomeController extends Controller
 		$page = Page::where('alias', '/')->first();
         $services = Service::where('is_active', true)->get();
         $sliders = Slider::where('is_active', true)->orderBy('sort')->get();
+        $certificates = Certificate::where('is_active', true)->orderBy('title')->get();
+        $news = News::where('is_active', true)->latest()->get();
         $aboutPage = Page::where('alias', Page::ABOUT_ALIAS)->first();
 
         //$isMobile = (Browser::isDesktop() || Browser::isTablet()) ? false : true;
@@ -37,7 +41,9 @@ class HomeController extends Controller
 		return view('home', [
 			'page' => $page,
             'sliders' => $sliders,
+            'certificates' => $certificates,
             'services' => $services,
+            'news' => $news,
             'aboutPage' => $aboutPage,
 			//'isMobile' => $isMobile,
 		]);
