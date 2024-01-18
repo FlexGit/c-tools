@@ -5,7 +5,7 @@
 		</div>
 	</div>
 	<div class="site-mobile-menu-body"></div>
-</div> <!-- .site-mobile-menu -->
+</div>
 
 <div class="site-navbar-wrap bg-white">
 	<div class="site-navbar-top">
@@ -26,7 +26,7 @@
 						    </a>
                         @endif
                         @if (isset($settingItems['email']))
-						    <a href="mailto:{{ $settingItems['email']->value }}" class="d-flex align-items-center">
+						    <a href="mailto:{{ $settingItems['email']->value }}" class="align-items-center d-none d-lg-block">
 							    <span class="icon-envelope mr-2"></span>
 							    <span class="d-none d-md-inline-block">{{ $settingItems['email']->value }}</span>
 						    </a>
