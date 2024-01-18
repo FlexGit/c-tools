@@ -123,9 +123,11 @@
     </div>
 @endif
 
-<div class="row mt-5 mb-5 justify-content-center">
-    <div class="col-12 text-center">
-        <h2 class="font-weight-light text-black display-4">Наши сертификаты</h2>
+<div class="container">
+    <div class="row mt-5 mb-5 justify-content-center">
+        <div class="col-12 text-center">
+            <h2 class="font-weight-light text-black display-4">Наши сертификаты</h2>
+        </div>
     </div>
 </div>
 <div class="site-section bg-light">
@@ -144,9 +146,11 @@
     </div>
 </div>
 
-<div class="row mt-5 mb-5 justify-content-center">
-    <div class="col-12 text-center">
-        <h2 class="font-weight-light text-black display-4">Наши партнёры</h2>
+<div class="container">
+    <div class="row mt-5 mb-5 justify-content-center">
+        <div class="col-12 text-center">
+            <h2 class="font-weight-light text-black display-4">Наши партнёры</h2>
+        </div>
     </div>
 </div>
 <div class="site-section bg-light">
@@ -167,9 +171,11 @@
     </div>
 </div>
 
-<div class="row mt-5 mb-5 justify-content-center">
-    <div class="col-12 text-center">
-        <h2 class="font-weight-light text-black display-4">Наши контакты</h2>
+<div class="container text-center">
+    <div class="row mt-5 mb-5 justify-content-center">
+        <div class="col-12 text-center">
+            <h2 class="font-weight-light text-black display-4">Наши контакты</h2>
+        </div>
     </div>
 </div>
 <div class="promo py-5 bg-primary" data-aos="fade">
