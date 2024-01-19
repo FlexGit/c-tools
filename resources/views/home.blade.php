@@ -11,11 +11,10 @@
                 <div class="container">
                     <div class="row align-items-center justify-content-center text-center">
                         <div class="col-md-10">
-                            <h1 class="mb-5">{{ $slider->title }}</h1>
+                            <p class="slide-title mb-5">{{ $slider->title }}</p>
                             @if ($slider->url)
                                 <p>
-                                    <a href="{{ $slider->url }}" class="btn btn-primary py-3 px-5 rounded-0">Подробнее</a>
-                                    <a href="#" class="btn btn-white btn-outline-white py-3 px-5 rounded-0">Подробнее</a>
+                                    <a href="{{ $slider->url }}" class="btn btn-white btn-outline-white py-3 px-5 rounded-0">Подробнее</a>
                                 </p>
                             @endif
                         </div>
@@ -26,19 +25,21 @@
     </div>
 @endif
 
-<div class="site-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 bg-image bg-sm-height mb-5 mb-md-0 order-md-2" style="background-image: url('images/img_1_colored.jpg');" data-aos="fade-up"></div>
-            <div class="col-md-6 pr-md-5 order-md-1">
-                <h2 class="display-3 line-height-xs text-black mb-4">О компании</h2>
-                <p class="mb-4">
-                    {!! $aboutPage ? $aboutPage->detail_text : '' !!}
-                </p>
+@if ($aboutPage)
+    <div class="site-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 bg-image bg-sm-height mb-5 mb-md-0 order-md-2" style="background-image: url({{ asset('storage/' . (is_array($aboutPage->image) ? str_ireplace('"', '', implode(' ', $aboutPage->image)) : str_ireplace('"', '', $aboutPage->image))) }});" data-aos="fade-up"></div>
+                <div class="col-md-6 pr-md-5 order-md-1">
+                    <h2 class="display-3 line-height-xs text-black mb-4">{{ $aboutPage->title }}</h2>
+                    <p class="mb-4">
+                        {!! $aboutPage->detail_text !!}
+                    </p>
+                </div>
             </div>
         </div>
     </div>
-</div>
+@endif
 
 @if ($news->count())
     <div class="site-section">
@@ -244,11 +245,8 @@
         @endif
     </div>
 </div>
-<div class="py-5 bg-primary" data-aos="fade">
+<div class="py-4 bg-primary" data-aos="fade">
     <div class="container text-center">
-        <h2 class="d-block mb-0 font-weight-light text-white">
-            Остались вопросы? Напишите нам
-        </h2>
     </div>
 </div>
 @endsection

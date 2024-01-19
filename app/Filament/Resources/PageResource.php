@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\PageResource\Pages;
 use App\Filament\Resources\PageResource\RelationManagers;
 use App\Models\Page;
+use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
@@ -60,6 +61,20 @@ class PageResource extends Resource
                     ->maxLength(255),
                 TextInput::make('sort')
                     ->maxLength(2),
+                FileUpload::make('image')
+                    ->directory('page')
+                    ->visibility('public')
+                    ->image()
+                    ->openable()
+                    ->moveFiles()
+                    ->imageEditor()
+                    ->imageEditorAspectRatios([
+                        null,
+                        '16:9',
+                        '4:3',
+                        '1:1',
+                    ])
+                    ->columnSpan('full'),
                 TinyEditor::make('detail_text')
                     ->setRelativeUrls(false)
                     ->fileAttachmentsDisk('public')

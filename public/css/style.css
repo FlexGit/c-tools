@@ -748,7 +748,14 @@ a {
 .slide-one-item.home-slider:active .owl-nav {
   opacity: 10;
   visibility: visible; }
-
+.slide-one-item .slide-title {
+    font-size: 2rem;
+}
+@media (min-width: 768px) {
+    .slide-one-item .slide-title {
+        font-size: 3rem;
+    }
+}
 .block-12 {
   position: relative; }
   .block-12 figure {

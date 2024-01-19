@@ -16,6 +16,7 @@ return new class extends Migration
 			$table->string('title');
 			$table->string('alias');
 			$table->longText('detail_text')->nullable();
+            $table->text('image')->nullable();
 			$table->text('meta_title')->nullable();
 			$table->text('meta_description')->nullable();
             $table->smallInteger('sort')->default(0);

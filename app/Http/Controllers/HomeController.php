@@ -9,22 +9,9 @@ use App\Models\Partner;
 use App\Models\Service;
 use App\Models\Slider;
 use Carbon\Carbon;
-use Illuminate\Http\Request;
-use Validator;
-use Browser;
 
 class HomeController extends Controller
 {
-	private $request;
-
-	/**
-	 * @param Request $request
-	 */
-	public function __construct(Request $request)
-	{
-		$this->request = $request;
-	}
-
 	/**
 	 * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
 	 */
@@ -34,9 +21,9 @@ class HomeController extends Controller
         $services = Service::where('is_active', true)->get();
         $sliders = Slider::where('is_active', true)->orderBy('sort')->get();
         $certificates = Certificate::where('is_active', true)->orderBy('title')->get();
-        $news = News::where('is_active', true)->latest()->get();
+        $news = News::where('is_active', true)->latest()->limit(4)->get();
         $partners = Partner::where('is_active', true)->latest()->get();
-        $aboutPage = Page::where('alias', Page::ABOUT_ALIAS)->first();
+        $aboutPage = Page::where('alias', Page::ABOUT_ALIAS)->where('is_active', true)->first();
 
 		return view('home', [
 			'page' => $page,
