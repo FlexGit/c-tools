@@ -43,18 +43,33 @@ class HomeController extends Controller
 	{
         $modelNames = [
             'page',
+            'section',
+            'product',
             'service',
             'news',
-            'product',
-            'section',
         ];
 		$items = [];
 
         foreach ($modelNames as $modelName) {
-            $models = app($modelName)::where('is_active', true)->get();
+            $models = app('\App\Models\\' . $modelName)::where('is_active', true)->get();
             foreach ($models as $model) {
+                switch ($modelName) {
+                    case 'section':
+                        $path = 'catalog/' . ($model->section ? $model->section->alias . '/' . $model->alias : $model->alias);
+                    break;
+                    case 'product':
+                        $path = 'catalog/' . (($model->section->section ? $model->section->section->alias . '/' . $model->section->alias : $model->section->alias) . '/' . $model->alias);
+                    break;
+                    case 'service':
+                    case 'news':
+                        $path = $modelName . '/' . $model->alias;
+                    break;
+                    default:
+                        $path = $model->alias;
+                    break;
+                }
                 $items[] = [
-                    'loc' => url($model->alias),
+                    'loc' => url($path),
                     'lastmod' => $model->updated_at ? $model->updated_at->tz('GMT')->toAtomString() : Carbon::now()->tz('GMT')->toAtomString(),
                     'changefreq' => 'weekly',
                     'priority' => 1,

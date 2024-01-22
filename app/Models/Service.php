@@ -35,4 +35,11 @@ class Service extends Model
             ResponseCache::clear();
         });
     }
+
+    /**
+     * @return mixed
+     */
+    public static function activeServices() {
+        return self::where('is_active', true)->orderBy('title')->get();
+    }
 }

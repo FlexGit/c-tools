@@ -3,6 +3,7 @@ namespace App\Http\ViewComposers;
 
 use App\Models\Page;
 use App\Models\Section;
+use App\Models\Service;
 use App\Models\Setting;
 use Illuminate\View\View;
 
@@ -21,12 +22,14 @@ class GlobalComposer {
         }
 
         $sections = Section::activeSections();
+        $services = Service::activeServices();
         $settingItems = Setting::activeSettings();
 
         return $view
             ->with('headerNavItems', $headerNavItems)
             ->with('footerNavItems', $footerNavItems)
-            ->with('sections', $sections)
+            ->with('menuSections', $sections)
+            ->with('menuServices', $services)
             ->with('settingItems', $settingItems);
     }
 }

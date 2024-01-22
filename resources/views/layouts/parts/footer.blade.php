@@ -1,4 +1,6 @@
-<footer class="site-footer">
+<div class="py-1 bg-primary"></div>
+
+<footer class="site-footer bg-light">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-5">
@@ -8,17 +10,19 @@
 	    					<h3 class="footer-heading mb-4"><a href="{{ route('home') }}">Главная</a></h3>
 		    				<ul class="list-unstyled">
                                 @foreach ($footerNavItems as $pageAlias => $pageTitle)
-                                    <li><a href="{{ route('page', $pageAlias) }}">{{ $pageTitle }}</a></li>
+                                    <li>
+                                        <a href="{{ route($pageAlias) }}">{{ $pageTitle }}</a>
+                                    </li>
                                 @endforeach
                             </ul>
                         @endif
 					</div>
 					<div class="col-7 col-md-7 col-lg-7 mb-5 mb-lg-0">
-                        @if ($sections->count())
-						    <h3 class="footer-heading mb-4"><a href="{{ route('page', app('\App\Models\Page')::SECTIONS_ALIAS) }}">Продукция</a></h3>
+                        @if ($menuSections->count())
+						    <h3 class="footer-heading mb-4"><a href="{{ route('catalog') }}">Продукция</a></h3>
 						    <ul class="list-unstyled">
-                                @foreach ($sections as $section)
-                                    <li><a href="{{ route('section', $section->alias) }}">{{ $section->title }}</a></li>
+                                @foreach ($menuSections as $section)
+                                    <li><a href="{{ route('catalog', $section->alias) }}">{{ $section->title }}</a></li>
                                 @endforeach
 						    </ul>
                         @endif
@@ -30,7 +34,7 @@
 			<div class="col-lg-6">
 				<div class="row">
 					<div class="col-md-12">
-						<h3 class="footer-heading mb-4"><a href="{{ route('page', app('\App\Models\Page')::CONTACTS_ALIAS) }}">Контакты</a></h3>
+						<h3 class="footer-heading mb-4"><a href="{{ route('contacts') }}">Контакты</a></h3>
 					</div>
 					<div class="col-md-8">
    					    @if (isset($settingItems['office-address']))

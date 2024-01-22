@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Filament\Support\Facades\FilamentAsset;
+use Illuminate\Pagination\Paginator;
 use Illuminate\Support\ServiceProvider;
 use Filament\Support\Assets\Js;
 
@@ -25,5 +26,7 @@ class AppServiceProvider extends ServiceProvider
             Js::make('custom-script', __DIR__ . '/../../resources/js/custom.js'),
             Js::make('jquery-script', __DIR__ . '/../../resources/js/jquery.min.js'),
         ]);
+
+        Paginator::useBootstrapFour();
     }
 }

@@ -1,9 +1,9 @@
 <?php
 
 use App\Http\Controllers\PageController;
-use App\Http\Controllers\ProductController;
-use App\Http\Controllers\SectionController;
+use App\Http\Controllers\CatalogController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\NewsController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,9 +19,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('page/{alias}', [PageController::class, 'index'])->name('page');
-Route::get('section/{alias}', [SectionController::class, 'index'])->name('section');
-Route::get('product/{alias}', [ProductController::class, 'index'])->name('product');
+Route::get('contacts', [PageController::class, 'contacts'])->name('contacts');
+Route::get('catalog/{sectionAlias?}/{subSectionAlias?}/{productAlias?}', [CatalogController::class, 'index'])->name('catalog');
+Route::get('service/{alias?}', [ServiceController::class, 'index'])->name('service');
+Route::get('news/{alias?}', [NewsController::class, 'index'])->name('news');
 
 Route::get('sitemap.xml', [HomeController::class, 'sitemap']);
 

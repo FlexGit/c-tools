@@ -12,6 +12,37 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
     <link rel="manifest" href="/images/site.webmanifest">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="">
+    <meta property="og:image" content="">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:site_name" content="Композитные технологии и оснастка">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "компания <?=isset($settingItems['company-name']) ? strip_tags($settingItems['company-name']->value) : ''?>",
+            "logo": "<?=isset($settingItems['logo']) ? url(asset('storage/' . $settingItems['logo']->image)) : ''?>",
+            "url": "<?=url('/')?>>",
+            "description":"<?=isset($settingItems['company-description']) ? strip_tags($settingItems['company-description']->value) : ''?>",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "<?=isset($settingItems['office-address']) ? strip_tags($settingItems['office-address']->value) : ''?>",
+                "addressLocality": "Балашиха",
+                "addressRegion": "Московская область",
+                "postalCode": "143983",
+                "addressCountry": "Russia"
+            },
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "<?=isset($settingItems['phone1']) ? strip_tags($settingItems['phone1']->value) : ''?>"
+            }
+        }
+    </script>
     <!-- CSS -->
 	@include('layouts.parts.css')
 	@stack('css')

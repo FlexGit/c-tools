@@ -51,16 +51,22 @@
                                 <a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a>
                             </div>
                             @if ($headerNavItems)
-							    <ul class="site-menu js-clone-nav d-none d-lg-block">
+							    <ul class="site-menu js-clone-nav d-none d-lg-block" itemscope itemtype="http://schema.org/SiteNavigationElement">
                                     @foreach ($headerNavItems as $pageAlias => $pageTitle)
-								        <li class="active @if ($pageAlias == 'catalog') has-children @endif">
-									        <a href="{{ route('page', $pageAlias) }}">{{ $pageTitle }}</a>
-                                            @if ($pageAlias == 'catalog' && $settingItems)
+								        <li class="active @if (in_array($pageAlias, [app('\App\Models\Page')::CATALOG_ALIAS, app('\App\Models\Page')::SERVICES_ALIAS])) has-children @endif">
+									        <a href="{{ route($pageAlias) }}" title="{{ $pageTitle }}" itemprop="url">{{ $pageTitle }}</a>
+                                            @if ($pageAlias == app('\App\Models\Page')::CATALOG_ALIAS)
 									            <ul class="dropdown arrow-top">
-                                                    @foreach ($sections as $section)
-										                <li><a href="{{ route('section', $section->alias) }}">{{ $section->title }}</a></li>
+                                                    @foreach ($menuSections as $section)
+										                <li><a href="{{ route('catalog', $section->alias) }}">{{ $section->title }}</a></li>
                                                     @endforeach
 									            </ul>
+                                            @elseif ($pageAlias == app('\App\Models\Page')::SERVICES_ALIAS)
+                                                <ul class="dropdown arrow-top">
+                                                    @foreach ($menuServices as $service)
+                                                        <li><a href="{{ route('service', $service->alias) }}">{{ $service->title }}</a></li>
+                                                    @endforeach
+                                                </ul>
                                             @endif
 								        </li>
                                     @endforeach
@@ -72,4 +78,5 @@
 			</div>
 		</div>
 	</div>
+    <div class="px-1 bg-primary"></div>
 </div>
