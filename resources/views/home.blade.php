@@ -179,7 +179,7 @@
 </div>
 <div class="site-section bg-light">
     <div class="container">
-        <div class="block-13" {{--data-aos="fade"--}}>
+        <div class="block-13">
             @foreach ($partners as $partner)
                 @if (!$partner->image)
                     @continue
@@ -226,49 +226,49 @@
         </div>
     </div>
 </div>
-<div class="site-block-half d-block d-lg-flex bg-light" {{--data-aos="fade"--}}>
-    <div class="m-auto text order-1 text-center py-4">
-        <span class="text-lg text-black mb-3">Адрес <strong>офиса</strong></span>
-        @if (isset($settingItems['office-address']))
-            <p class="lead">
-                {{ $settingItems['office-address']->value }}
-            </p>
-        @endif
-    </div>
-    <div class="image order-2">
-        @if (isset($settingItems['office-map']))
-            {!! strip_tags($settingItems['office-map']->value, '<iframe>') !!}
-        @endif
-    </div>
-</div>
-<div class="site-block-half d-block d-lg-flex bg-light" {{--data-aos="fade"--}}>
-    <div class="m-auto text order-2 text-center py-4">
-        <span class="text-lg text-black mb-3">Адрес <strong>производства</strong></span>
-        @if (isset($settingItems['manufacture-address']))
-            <p class="lead">
-                {{ $settingItems['manufacture-address']->value }}
-            </p>
-        @endif
-    </div>
-    <div class="image order-1">
-        @if (isset($settingItems['manufacture-map']))
-            {!! strip_tags($settingItems['manufacture-map']->value, '<iframe>') !!}
-        @endif
-    </div>
-</div>
-<div class="site-block-half d-block d-lg-flex bg-light" {{--data-aos="fade"--}}>
-    <div class="m-auto text order-1 text-center py-4">
-        <span class="text-lg text-black mb-3">Адрес <strong>склада</strong></span>
-        @if (isset($settingItems['manufacture-address']))
-            <p class="lead">
-                {{ $settingItems['warehouse-address']->value }}
-            </p>
-        @endif
-    </div>
-    <div class="image order-2">
-        @if (isset($settingItems['warehouse-map']))
-            {!! strip_tags($settingItems['warehouse-map']->value, '<iframe>') !!}
-        @endif
+<div class="site-section bg-light">
+    <div class="container text-center">
+        <div class="row d-flex justify-content-between">
+            <div class="block-47 col-12 text text-lg text-center py-4 lead">
+                <blockquote class="block-47-quote">
+                    <p class="text-black mb-3 mr-1">
+                        Адрес <strong>офиса</strong>
+                    </p>
+                    @if (isset($settingItems['office-address']))
+                        <a class="popup-maps" href="{{ strip_tags($settingItems['office-map']->value) }}" title="Открыть карту">
+                            <span class="icon-map-marker mr-1"></span>
+                            {{ $settingItems['office-address']->value }}
+                        </a>
+                    @endif
+                </blockquote>
+            </div>
+            <div class="block-47 col-12 text text-lg text-center py-4 lead">
+                <blockquote class="block-47-quote">
+                    <p class="text-black mb-3 mr-1">
+                        Адрес <strong>производства</strong>
+                    </p>
+                    @if (isset($settingItems['manufacture-address']))
+                        <a class="popup-maps" href="{{ strip_tags($settingItems['manufacture-map']->value) }}" title="Открыть карту">
+                            <span class="icon-map-marker mr-1"></span>
+                            {{ $settingItems['manufacture-address']->value }}
+                        </a>
+                    @endif
+                </blockquote>
+            </div>
+            <div class="block-47 col-12 text text-lg text-center py-4 lead">
+                <blockquote class="block-47-quote">
+                    <p class="text-black mb-3 mr-1">
+                        Адрес <strong>склада</strong>
+                    </p>
+                    @if (isset($settingItems['warehouse-address']))
+                        <a class="popup-maps" href="{{ strip_tags($settingItems['warehouse-map']->value) }}" title="Открыть карту">
+                            <span class="icon-map-marker mr-1"></span>
+                            {{ $settingItems['warehouse-address']->value }}
+                        </a>
+                    @endif
+                </blockquote>
+            </div>
+        </div>
     </div>
 </div>
 @endsection

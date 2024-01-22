@@ -43,3 +43,6 @@
 .icon-arrow_forward:before {
     content: "\e5c8";
 }
+.icon-map-marker:before {
+    content: "\f041";
+}
