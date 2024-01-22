@@ -44,6 +44,10 @@
             }
         }
     </script>
+    <!-- CSS -->
+    @include('layouts.parts.css')
+    @stack('css')
+    <!-- END CSS -->
 </head>
 <body>
 	<div class="site-wrap">
@@ -59,11 +63,6 @@
 		@include('layouts.parts.footer')
 		<!-- END FOOTER -->
 	</div>
-
-    <!-- CSS -->
-    @include('layouts.parts.css')
-    @stack('css')
-    <!-- END CSS -->
 
 	<!-- JS -->
 	@include('layouts.parts.js')
