@@ -55,7 +55,7 @@
                                     @foreach ($headerNavItems as $pageAlias => $pageTitle)
 								        <li class="active {{--@if (in_array($pageAlias, [app('\App\Models\Page')::CATALOG_ALIAS, app('\App\Models\Page')::SERVICES_ALIAS])) has-children @endif--}}">
 									        <a href="{{ route($pageAlias) }}" title="{{ $pageTitle }}" itemprop="url">{{ $pageTitle }}</a>
-                                            @if ($pageAlias == app('\App\Models\Page')::CATALOG_ALIAS)
+                                            {{--@if ($pageAlias == app('\App\Models\Page')::CATALOG_ALIAS)
 									            <ul class="dropdown arrow-top">
                                                     @foreach ($menuSections as $section)
 										                <li><a href="{{ route('catalog', $section->alias) }}">{{ $section->title }}</a></li>
@@ -67,7 +67,7 @@
                                                         <li><a href="{{ route('service', $service->alias) }}">{{ $service->title }}</a></li>
                                                     @endforeach
                                                 </ul>
-                                            @endif
+                                            @endif--}}
 								        </li>
                                     @endforeach
 							    </ul>
