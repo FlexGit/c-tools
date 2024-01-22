@@ -14,6 +14,7 @@
     <link rel="manifest" href="/images/site.webmanifest">
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preload" as="image" href="/storage/slider/01HMRP2SBWZ0PR4RK4QBSRA1VJ.webp">
     <meta property="og:title" content="">
     <meta property="og:description" content="">
     <meta property="og:url" content="">
