@@ -7,6 +7,9 @@
 jQuery(document).ready(function($) {
 	"use strict";
 
+    const observer = lozad();
+    observer.observe();
+
 	var siteMenuClone = function() {
 		$('.js-clone-nav').each(function() {
 			var $this = $(this);

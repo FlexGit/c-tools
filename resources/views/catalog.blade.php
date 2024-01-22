@@ -21,7 +21,7 @@
                     <div class="col-md-6 mb-5 mb-md-0 order-md-2">
                         <a href="{{ route('catalog', $section->alias) }}">
                             @if ($section->image)
-                                <img src="{{ asset('storage/' . $section->image) }}" alt="{{ $section->title }}" data-aos="fade-up">
+                                <img href="#" class="lozad" data-src="{{ asset('storage/' . $section->image) }}" alt="{{ $section->title }}" data-aos="fade-up">
                             @endif
                         </a>
                     </div>
