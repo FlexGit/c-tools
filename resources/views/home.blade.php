@@ -226,7 +226,7 @@
         </div>
     </div>
 </div>
-{{--<div class="site-block-half d-block d-lg-flex bg-light" data-aos="fade">
+<div class="site-block-half d-block d-lg-flex bg-light" data-aos="fade">
     <div class="m-auto text order-1 text-center py-4">
         <span class="text-lg text-black mb-3">Адрес <strong>офиса</strong></span>
         @if (isset($settingItems['office-address']))
@@ -270,7 +270,7 @@
             {!! strip_tags($settingItems['warehouse-map']->value, '<iframe>') !!}
         @endif
     </div>
-</div>--}}
+</div>
 @endsection
 
 @push('css')
