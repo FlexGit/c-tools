@@ -187,8 +187,8 @@ padding: 4em 0; }
 
 /* Navbar */
 .site-navbar-wrap {
-  /*position: sticky;
-  top: 0;*/
+  position: sticky;
+  top: 0;
   z-index: 99;
   width: 100%; }
   .site-navbar-wrap a {
@@ -264,9 +264,7 @@ padding: 4em 0; }
         background: #fff;
         -webkit-transition: 0.2s 0s;
         -o-transition: 0.2s 0s;
-        transition: 0.2s 0s;
-        z-index: 99;
-      }
+        transition: 0.2s 0s; }
         .site-navbar .site-navigation .site-menu .has-children .dropdown.arrow-top {
           position: absolute; }
           .site-navbar .site-navigation .site-menu .has-children .dropdown.arrow-top:before {
