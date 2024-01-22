@@ -161,7 +161,7 @@
                 <div class="block-47">
                     <blockquote class="block-47-quote">
                         <a class="image-popup" href="{{ asset('storage/' . $certificate->image) }}">
-                            <img src="#" class="lozad" data-src="{{ asset('storage/' . $certificate->image) }}" alt="{{ $certificate->title }}">
+                            <img src="#" class="lozad" data-src="{{ asset('storage/' . $certificate->image) }}" alt="{{ $certificate->title }}" width="178" height="251">
                         </a>
                     </blockquote>
                 </div>
@@ -186,7 +186,7 @@
                 @endif
                 <div class="block-47">
                     <blockquote class="block-47-quote">
-                        <img src="#" class="lozad" data-src="{{ asset('storage/' . $partner->image) }}" alt="{{ $partner->title }}">
+                        <img src="#" class="lozad" data-src="{{ asset('storage/' . $partner->image) }}" alt="{{ $partner->title }}" width="178" height="178">
                     </blockquote>
                 </div>
             @endforeach

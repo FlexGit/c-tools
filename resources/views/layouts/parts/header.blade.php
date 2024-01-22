@@ -41,7 +41,7 @@
 			<div class="row align-items-center">
 				<div class="col-4">
                     @if (isset($settingItems['logo']) && $settingItems['logo']->image)
-					    <a href="{{ route('home') }}"><img src="#" class="lozad" data-src="{{ asset('storage/' . $settingItems['logo']->image) }}" width="240" height="auto" alt="Логотип компании Композитные технологии и оснастка"></a>
+					    <a href="{{ route('home') }}"><img src="#" class="lozad" data-src="{{ asset('storage/' . $settingItems['logo']->image) }}" width="240" height="41" alt="Логотип компании Композитные технологии и оснастка"></a>
                     @endif
 				</div>
 				<div class="col-8">
