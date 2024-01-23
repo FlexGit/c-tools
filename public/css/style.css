@@ -1088,3 +1088,7 @@ h1 {
 .site-section img {
     width: 100%;
 }
+img.certificate,
+img.partner {
+    height: auto;
+}
