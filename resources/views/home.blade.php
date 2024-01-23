@@ -231,40 +231,46 @@
         <div class="row d-flex justify-content-between">
             <div class="block-47 col-12 text text-lg text-center py-4 lead">
                 <blockquote class="block-47-quote">
-                    <p class="text-black mb-3 mr-1">
-                        Адрес <strong>офиса</strong>
-                    </p>
-                    @if (isset($settingItems['office-address']))
-                        <a class="popup-maps" href="{{ strip_tags($settingItems['office-map']->value) }}" title="Открыть карту">
-                            <span class="icon-map-marker mr-1"></span>
-                            {{ $settingItems['office-address']->value }}
-                        </a>
+                    <div class="text-black mb-3 mr-1">
+                        <strong>Адрес офиса</strong>
+                        @if (isset($settingItems['office-address']))
+                            <p>{{ strip_tags($settingItems['office-address']->value) }}</p>
+                        @endif
+                    </div>
+                    @if (isset($settingItems['office-map']))
+                        <p class="map-container">
+                            <script type="text/javascript" charset="utf-8" async src="{{ strip_tags($settingItems['office-map']->value) }}"></script>
+                        </p>
                     @endif
                 </blockquote>
             </div>
             <div class="block-47 col-12 text text-lg text-center py-4 lead">
                 <blockquote class="block-47-quote">
-                    <p class="text-black mb-3 mr-1">
-                        Адрес <strong>производства</strong>
-                    </p>
-                    @if (isset($settingItems['manufacture-address']))
-                        <a class="popup-maps" href="{{ strip_tags($settingItems['manufacture-map']->value) }}" title="Открыть карту">
-                            <span class="icon-map-marker mr-1"></span>
-                            {{ $settingItems['manufacture-address']->value }}
-                        </a>
+                    <div class="text-black mb-3 mr-1">
+                        <strong>Адрес производства</strong>
+                        @if (isset($settingItems['manufacture-address']))
+                            <p>{{ strip_tags($settingItems['manufacture-address']->value) }}</p>
+                        @endif
+                    </div>
+                    @if (isset($settingItems['manufacture-map']))
+                        <p class="map-container">
+                            <script type="text/javascript" charset="utf-8" async src="{{ strip_tags($settingItems['manufacture-map']->value) }}"></script>
+                        </p>
                     @endif
                 </blockquote>
             </div>
             <div class="block-47 col-12 text text-lg text-center py-4 lead">
                 <blockquote class="block-47-quote">
-                    <p class="text-black mb-3 mr-1">
-                        Адрес <strong>склада</strong>
-                    </p>
-                    @if (isset($settingItems['warehouse-address']))
-                        <a class="popup-maps" href="{{ strip_tags($settingItems['warehouse-map']->value) }}" title="Открыть карту">
-                            <span class="icon-map-marker mr-1"></span>
-                            {{ $settingItems['warehouse-address']->value }}
-                        </a>
+                    <div class="text-black mb-3 mr-1">
+                        <strong>Адрес склада</strong>
+                        @if (isset($settingItems['warehouse-address']))
+                            <p>{{ strip_tags($settingItems['warehouse-address']->value) }}</p>
+                        @endif
+                    </div>
+                    @if (isset($settingItems['warehouse-map']))
+                        <p class="map-container">
+                            <script type="text/javascript" charset="utf-8" async src="{{ strip_tags($settingItems['warehouse-map']->value) }}"></script>
+                        </p>
                     @endif
                 </blockquote>
             </div>
