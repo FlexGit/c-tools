@@ -36,12 +36,15 @@ jQuery(document).ready(function($) {
         }, 1000);
 
 		$('body').on('click', '.arrow-collapse', function(e) {
-            var $this = $(this);
+            var $this = $(this),
+                $subMenu = $this.closest('li').find('.collapse');
 
-            if ($this.closest('li').find('.collapse').hasClass('show')) {
-                $this.removeClass('active');
+            if ($subMenu.hasClass('show')) {
+                $this.removeClass('active').addClass('collapsed');
+                $subMenu.removeClass('show');
             } else {
-                $this.addClass('active');
+                $this.addClass('active').removeClass('collapsed');
+                $subMenu.addClass('show');
             }
             e.preventDefault();
         });
@@ -106,7 +109,7 @@ jQuery(document).ready(function($) {
         });
 
         $('.popup-youtube, .popup-vimeo, .popup-maps').magnificPopup({
-            /*disableOn: 700,*/
+            disableOn: 700,
             type: 'iframe',
             mainClass: 'mfp-fade',
             removalDelay: 160,
