@@ -24,7 +24,7 @@
                     <div class="col-md-6 mb-5 mb-md-0 order-md-2">
                         @if ($product->image)
                             <a class="image-popup" href="{{ asset('storage/' . $product->image) }}">
-                                <img src="#" class="lozad" data-src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->title }}" data-aos="fade-up">
+                                <img src="#" class="lozad" data-src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->title }}">
                             </a>
                         @endif
                     </div>

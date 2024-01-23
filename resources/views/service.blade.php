@@ -20,7 +20,7 @@
                     <div class="col-md-6 mb-5 mb-md-0 order-md-2">
                         @if ($service->image)
                             <a class="image-popup" href="{{ asset('storage/' . $service->image) }}">
-                                <img src="#" class="lozad" data-src="{{ asset('storage/' . $service->image) }}" alt="{{ $service->title }}" data-aos="fade-up">
+                                <img src="#" class="lozad" data-src="{{ asset('storage/' . $service->image) }}" alt="{{ $service->title }}">
                             </a>
                         @endif
                     </div>

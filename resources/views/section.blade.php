@@ -23,7 +23,7 @@
                 <div class="row">
                     <div class="col-md-6 mb-5 mb-md-0 order-md-2">
                         @if ($section->image)
-                            <img src="#" class="lozad" data-src="{{ asset('storage/' . $section->image) }}" alt="{{ $section->title }}" data-aos="fade-up">
+                            <img src="#" class="lozad" data-src="{{ asset('storage/' . $section->image) }}" alt="{{ $section->title }}">
                         @endif
                     </div>
                     <div class="col-md-6 pr-md-5 order-md-1">
@@ -38,7 +38,7 @@
                     @foreach ($section->sections as $subSection)
                         <div class="col-lg-6 mb-4">
                             <div class="row no-gutters align-items-stretch h-100 half-sm">
-                                <div class="col-md-6 bg-image order-md-2 order-lg-1 bg-sm-height lozad" data-background-image="{{ asset('storage/' . $subSection->image) }}" data-aos="fade" data-aos-delay="0"></div>
+                                <div class="col-md-6 bg-image order-md-2 order-lg-1 bg-sm-height lozad" data-background-image="{{ asset('storage/' . $subSection->image) }}"></div>
                                 <div class="col-md-6 bg-light text order-md-1 order-lg-2">
                                     <div class="p-4">
                                         <a href="{{ route('catalog', [$subSection->section->alias, $subSection->alias]) }}">
@@ -61,7 +61,7 @@
                     @foreach ($section->products as $product)
                         <div class="col-lg-6 mb-4">
                             <div class="row no-gutters align-items-stretch h-100 half-sm">
-                                <div class="col-md-6 bg-image order-md-2 order-lg-1 bg-sm-height lozad" data-background-image="{{ asset('storage/' . $product->image) }}" data-aos="fade" data-aos-delay="0"></div>
+                                <div class="col-md-6 bg-image order-md-2 order-lg-1 bg-sm-height lozad" data-background-image="{{ asset('storage/' . $product->image) }}"></div>
                                 <div class="col-md-6 bg-light text order-md-1 order-lg-2">
                                     <div class="p-4">
                                         <a href="@if ($section->section){{ route('catalog', [$section->section->alias, $section->alias, $product->alias]) }}@else{{ route('catalog', [$section->alias, $product->alias]) }}@endif">

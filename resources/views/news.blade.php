@@ -22,7 +22,7 @@
                 <div class="col-md-6 mb-5 mb-md-0 order-md-2">
                     @if ($oneNews->image)
                         <a href="{{ route('news', $oneNews->alias) }}">
-                            <img src="#" class="lozad" data-src="{{ asset('storage/' . $oneNews->image) }}" alt="{{ $oneNews->title }}" data-aos="fade-up">
+                            <img src="#" class="lozad" data-src="{{ asset('storage/' . $oneNews->image) }}" alt="{{ $oneNews->title }}">
                         </a>
                     @endif
                 </div>
