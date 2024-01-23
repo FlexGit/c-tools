@@ -109,7 +109,7 @@ jQuery(document).ready(function($) {
             /*disableOn: 700,*/
             type: 'iframe',
             mainClass: 'mfp-fade',
-            removalDelay: 0,
+            removalDelay: 160,
             preloader: true,
             fixedContentPos: false
         });

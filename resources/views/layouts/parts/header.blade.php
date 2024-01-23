@@ -13,7 +13,7 @@
 			<div class="row align-items-center">
 				<div class="col-12">
 					<div class="d-flex ml-auto">
-                        {{--@if (isset($settingItems['phone1']))
+                        @if (isset($settingItems['phone1']))
 						    <a href="tel:{{ preg_replace('/[^0-9]/', '', $settingItems['phone1']->value) }}" class="d-flex align-items-center ml-auto mr-4">
 							    <span class="icon-phone mr-2"></span>
 							    <span class="d-md-inline-block">{{ $settingItems['phone1']->value }}</span>
@@ -30,7 +30,7 @@
 							    <span class="icon-envelope mr-2"></span>
 							    <span class="d-none d-md-inline-block">{{ $settingItems['email']->value }}</span>
 						    </a>
-                        @endif--}}
+                        @endif
 					</div>
 				</div>
 			</div>
@@ -53,9 +53,9 @@
                             @if ($headerNavItems)
 							    <ul class="site-menu js-clone-nav d-none d-lg-block" itemscope itemtype="http://schema.org/SiteNavigationElement">
                                     @foreach ($headerNavItems as $pageAlias => $pageTitle)
-								        <li class="active {{--@if (in_array($pageAlias, [app('\App\Models\Page')::CATALOG_ALIAS, app('\App\Models\Page')::SERVICES_ALIAS])) has-children @endif--}}">
+								        <li class="active @if (in_array($pageAlias, [app('\App\Models\Page')::CATALOG_ALIAS, app('\App\Models\Page')::SERVICES_ALIAS])) has-children @endif">
 									        <a href="{{ route($pageAlias) }}" title="{{ $pageTitle }}" itemprop="url">{{ $pageTitle }}</a>
-                                            {{--@if ($pageAlias == app('\App\Models\Page')::CATALOG_ALIAS)
+                                            @if ($pageAlias == app('\App\Models\Page')::CATALOG_ALIAS)
 									            <ul class="dropdown arrow-top">
                                                     @foreach ($menuSections as $section)
 										                <li><a href="{{ route('catalog', $section->alias) }}">{{ $section->title }}</a></li>
@@ -67,7 +67,7 @@
                                                         <li><a href="{{ route('service', $service->alias) }}">{{ $service->title }}</a></li>
                                                     @endforeach
                                                 </ul>
-                                            @endif--}}
+                                            @endif
 								        </li>
                                     @endforeach
 							    </ul>
