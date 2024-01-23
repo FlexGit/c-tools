@@ -39,19 +39,21 @@
 	<div class="site-navbar bg-light">
 		<div class="container py-1">
 			<div class="row align-items-center">
-				<div class="col-4">
+				<div class="col">
                     @if (isset($settingItems['logo']) && $settingItems['logo']->image)
-					    <a href="{{ route('home') }}"><img src="#" class="lozad" data-src="{{ asset('storage/' . $settingItems['logo']->image) }}" width="240" height="41" alt="Логотип компании Композитные технологии и оснастка"></a>
+					    <a href="{{ route('home') }}">
+                            <img src="#" class="lozad" data-src="{{ asset('storage/' . $settingItems['logo']->image) }}" width="240" height="41" alt="Логотип компании Композитные технологии и оснастка">
+                        </a>
                     @endif
 				</div>
-				<div class="col-8">
+				<div class="col">
 					<nav class="site-navigation text-right" role="navigation">
 						<div class="container">
 							<div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3">
                                 <a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a>
                             </div>
                             @if ($headerNavItems)
-							    <ul class="site-menu js-clone-nav d-none d-lg-block" itemscope itemtype="http://schema.org/SiteNavigationElement">
+							    <ul class="site-menu js-clone-nav d-none d-lg-flex" itemscope itemtype="http://schema.org/SiteNavigationElement">
                                     @foreach ($headerNavItems as $pageAlias => $pageTitle)
 								        <li class="active @if (in_array($pageAlias, [app('\App\Models\Page')::CATALOG_ALIAS, app('\App\Models\Page')::SERVICES_ALIAS])) has-children @endif">
 									        <a href="{{ route($pageAlias) }}" title="{{ $pageTitle }}" itemprop="url">{{ $pageTitle }}</a>
