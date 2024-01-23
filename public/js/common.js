@@ -108,14 +108,14 @@ jQuery(document).ready(function($) {
             }
         });
 
-        $('.popup-youtube, .popup-vimeo, .popup-maps').magnificPopup({
+        /*$('.popup-youtube, .popup-vimeo, .popup-maps').magnificPopup({
             disableOn: 700,
             type: 'iframe',
             mainClass: 'mfp-fade',
             removalDelay: 160,
             preloader: true,
             fixedContentPos: false
-        });
+        });*/
 	};
 	siteMagnificPopup();
 });
