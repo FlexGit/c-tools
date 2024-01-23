@@ -49,8 +49,8 @@
                             @endif
                         </p>
                         @if (isset($settingItems['office-map']))
-                            <p>
-                                {!! strip_tags($settingItems['office-map']->value, '<iframe>') !!}
+                            <p class="map-container">
+                                <script type="text/javascript" charset="utf-8" async src="{{ strip_tags($settingItems['office-map']->value) }}"></script>
                             </p>
                         @endif
                         <hr />
@@ -61,8 +61,8 @@
                             @endif
                         </p>
                         @if (isset($settingItems['manufacture-map']))
-                            <p>
-                                {!! strip_tags($settingItems['manufacture-map']->value, '<iframe>') !!}
+                            <p class="map-container">
+                                <script type="text/javascript" charset="utf-8" async src="{{ strip_tags($settingItems['manufacture-map']->value) }}"></script>
                             </p>
                         @endif
                         <hr />
@@ -73,8 +73,8 @@
                             @endif
                         </p>
                         @if (isset($settingItems['warehouse-map']))
-                            <p>
-                                {!! strip_tags($settingItems['warehouse-map']->value, '<iframe>') !!}
+                            <p class="map-container">
+                                <script type="text/javascript" charset="utf-8" async src="{{ strip_tags($settingItems['warehouse-map']->value) }}"></script>
                             </p>
                         @endif
                     </div>
