@@ -26,7 +26,6 @@
 @endif
 
 @if ($aboutPage)
-    <a name="about"></a>
     <div class="site-section">
         <div class="container">
             <div class="row">
@@ -43,7 +42,6 @@
 @endif
 
 @if ($news->count())
-    <a name="news"></a>
     <div class="site-section">
         <div class="container">
             <div class="row mb-5 justify-content-center">
@@ -79,7 +77,6 @@
 @endif
 
 @if ($menuSections->count())
-    <a name="sections"></a>
     <div class="site-section">
         <div class="container">
             <div class="row mb-5 justify-content-center">
@@ -112,7 +109,6 @@
 @endif
 
 @if ($services->count())
-    <a name="services"></a>
     <div class="site-section">
         <div class="container">
             <div class="row mb-5 justify-content-center">
@@ -194,8 +190,7 @@
     </div>
 </div>
 
-<a name="contacts"></a>
-<div class="container text-center">
+<div class="container text-center js-contacts-container">
     <div class="row mt-5 mb-5 justify-content-center">
         <div class="col-12 text-center">
             <h2 class="font-weight-light text-black display-4">Наши контакты</h2>
