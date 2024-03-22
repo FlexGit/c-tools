@@ -48,7 +48,7 @@
                         @endif
                     </p>
                     @if (isset($settingItems['office-map']))
-                        {{ $settingItems['office-map']->value }}
+                        {!! $settingItems['office-map']->value !!}
                     @endif
                     <hr />
                     <p>
@@ -58,7 +58,7 @@
                         @endif
                     </p>
                     @if (isset($settingItems['manufacture-map']))
-                        {{ $settingItems['manufacture-map']->value }}
+                        {!! $settingItems['manufacture-map']->value !!}
                     @endif
                     <hr />
                     <p>
@@ -68,7 +68,7 @@
                         @endif
                     </p>
                     @if (isset($settingItems['warehouse-map']))
-                        {{ $settingItems['warehouse-map']->value }}
+                        {!! $settingItems['warehouse-map']->value !!}
                     @endif
                 </div>
             </div>
