@@ -126,7 +126,7 @@
                                     <h2 class="h5 mb-3 text-black line-height-sm">{{ $service->title }}</h2>
                                     {{ strip_tags($service->preview_text) }}
                                     <p class="mb-0">
-                                        <a href="{{ route('service', $service->alias) }}">
+                                        <a href="{{ route('services', $service->alias) }}">
                                             <small class="text-uppercase font-weight-bold text-black">Подробнее</small>
                                         </a>
                                     </p>
