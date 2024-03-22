@@ -48,7 +48,10 @@ class CatalogController extends Controller
             ]);
         }
 
-		$sections = Section::where('is_active', true)->oldest()->paginate(env('PAGINATION', 10));
+		$sections = Section::where('is_active', true)
+            ->whereNull('section_id')
+            ->oldest()
+            ->paginate(env('PAGINATION', 10));
         $page = Page::where('is_active', true)
             ->where('alias', app('\App\Models\Page')::CATALOG_ALIAS)
             ->first();
