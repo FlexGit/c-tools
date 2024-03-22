@@ -66,7 +66,7 @@
                                             @elseif ($pageAlias == app('\App\Models\Page')::SERVICES_ALIAS)
                                                 <ul class="dropdown arrow-top">
                                                     @foreach ($menuServices as $service)
-                                                        <li><a href="{{ route('service', $service->alias) }}">{{ $service->title }}</a></li>
+                                                        <li><a href="{{ route('services', $service->alias) }}">{{ $service->title }}</a></li>
                                                     @endforeach
                                                 </ul>
                                             @endif
