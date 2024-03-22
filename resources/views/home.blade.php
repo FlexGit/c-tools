@@ -233,9 +233,7 @@
                         @endif
                     </div>
                     @if (isset($settingItems['office-map']))
-                        <p class="map-container">
-                            <script type="text/javascript" charset="utf-8" async src="{{ strip_tags($settingItems['office-map']->value) }}"></script>
-                        </p>
+                        {{ $settingItems['office-map']->value }}
                     @endif
                 </blockquote>
             </div>
@@ -248,9 +246,7 @@
                         @endif
                     </div>
                     @if (isset($settingItems['manufacture-map']))
-                        <p class="map-container">
-                            <script type="text/javascript" charset="utf-8" async src="{{ strip_tags($settingItems['manufacture-map']->value) }}"></script>
-                        </p>
+                        {{ $settingItems['manufacture-map']->value }}
                     @endif
                 </blockquote>
             </div>
@@ -263,9 +259,7 @@
                         @endif
                     </div>
                     @if (isset($settingItems['warehouse-map']))
-                        <p class="map-container">
-                            <script type="text/javascript" charset="utf-8" async src="{{ strip_tags($settingItems['warehouse-map']->value) }}"></script>
-                        </p>
+                        {{ $settingItems['warehouse-map']->value }}
                     @endif
                 </blockquote>
             </div>
