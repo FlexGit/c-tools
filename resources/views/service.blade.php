@@ -31,7 +31,7 @@
                         </p>
                     </div>
                 </div>
-                <a href="{{ route('service') }}">к списку услуг</a>
+                <a href="{{ route('services') }}">к списку услуг</a>
             </div>
         </div>
     @endif
