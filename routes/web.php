@@ -21,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('contacts', [PageController::class, 'contacts'])->name('contacts');
 Route::get('catalog/{sectionAlias?}/{subSectionAlias?}/{productAlias?}', [CatalogController::class, 'index'])->name('catalog');
-Route::get('services/{alias?}', [ServiceController::class, 'index'])->name('service');
+Route::get('services/{alias?}', [ServiceController::class, 'index'])->name('services');
 Route::get('news/{alias?}', [NewsController::class, 'index'])->name('news');
 
 Route::get('sitemap.xml', [HomeController::class, 'sitemap']);
