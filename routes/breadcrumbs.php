@@ -51,13 +51,13 @@ Breadcrumbs::for('oneNews', function (BreadcrumbTrail $trail, $oneNews) {
 // Home > Services
 Breadcrumbs::for('services', function (BreadcrumbTrail $trail) {
     $trail->parent('home');
-    $trail->push('Услуги', route('service'));
+    $trail->push('Услуги', route('services'));
 });
 
 // Home > Services > Service
 Breadcrumbs::for('service', function (BreadcrumbTrail $trail, $service) {
     $trail->parent('services');
-    $trail->push($service->title, route('service', $service->alias));
+    $trail->push($service->title, route('services', $service->alias));
 });
 
 // Home > Contacts
