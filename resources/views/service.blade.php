@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title', $service->meta_title ?? '')
-@section('description', $service->meta_description)
+@section('description', $service->meta_description ?? '')
 
 @section('content')
 

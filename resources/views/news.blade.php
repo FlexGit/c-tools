@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title', $page->meta_title ?? '')
-@section('description', $page->meta_description)
+@section('description', $page->meta_description ?? '')
 
 @section('content')
 

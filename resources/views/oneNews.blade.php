@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title', $oneNews->meta_title ?? '')
-@section('description', $oneNews->meta_description)
+@section('description', $oneNews->meta_description ?? '')
 
 @section('content')
 

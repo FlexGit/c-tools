@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title', $contacts->meta_title ?? '')
-@section('description', $contacts->meta_description)
+@section('description', $contacts->meta_description ?? '')
 
 @section('content')
 
