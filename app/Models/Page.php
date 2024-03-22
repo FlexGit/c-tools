@@ -13,7 +13,7 @@ class Page extends Model
     CONST ABOUT_ALIAS = 'about';
     CONST CONTACTS_ALIAS = 'contacts';
     CONST CATALOG_ALIAS = 'catalog';
-    CONST SERVICES_ALIAS = 'service';
+    CONST SERVICES_ALIAS = 'services';
     CONST NEWS_ALIAS = 'news';
 
     /**
